@@ -1,5 +1,6 @@
 Cool-Juqery-Effects
 ===================
+click to see examples
 <table style="width:100%">
 <tr>
   <td>
