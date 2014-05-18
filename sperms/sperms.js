@@ -1,6 +1,6 @@
-var canvas_width = $(document).width();
-var canvas_height = $(document).height();
-var sperm_count = 30;
+var canvas_width = $(document).width() * .8;
+var canvas_height = $(document).height() * 0.8;
+var sperm_count = 20;
 var sperm_size = 30;
 var sperm_tail_length = 50;
 var sperm_color = 'white';
@@ -72,24 +72,25 @@ function MoveSpermOne(index,pos_x,pos_y,angle){
 
 function MoveSpermTwo(index,pos_x,pos_y,angle){
 	var duration = Math.floor((Math.random() * 400))+800;
-	var moveto_x = pos_x + Math.floor((Math.random() * sperm_move_speed * 2 + 1)) - sperm_move_speed;
-	var moveto_y = pos_y + Math.floor((Math.random() * sperm_move_speed * 2 + 1)) - sperm_move_speed;
-	var ran_angle = Math.floor((Math.random() * 40 + 1)) - 20;
+  var radians = angle * Math.PI / 180;
+	var moveto_x = pos_x - (sperm_move_speed * Math.cos(radians));
+	var moveto_y = pos_y - (sperm_move_speed * Math.sin(radians));
+	var ran_angle = Math.floor(Math.random() * 20 - 40) + 180;
   var new_angle = 0;
   if (moveto_x<0){
-    moveto_x = 0;
+    moveto_x = 1;
     new_angle = ran_angle;
   }
   if (moveto_x>canvas_width){
-    moveto_x = canvas_width;
+    moveto_x = canvas_width-1;
     new_angle = ran_angle;
   }
   if (moveto_y<0){
-    moveto_y = 0;
+    moveto_y = 1;
     new_angle = ran_angle;
   }
   if (moveto_y>canvas_width){
-    moveto_y = canvas_width;
+    moveto_y = canvas_width-1;
     new_angle = ran_angle;
   }
 	$('canvas').animateLayer('tail'+index, {
@@ -104,7 +105,7 @@ function MoveSpermTwo(index,pos_x,pos_y,angle){
   		y: moveto_y,
   		rotate: '+='+new_angle
 	}, duration, function(layer) {
-  		MoveSpermOne(index,pos_x,pos_y,angle);
+  		MoveSpermOne(index,moveto_x,moveto_y,angle+new_angle);
 	});
 	$('canvas').animateLayer('head'+index, {
   		x: moveto_x,
