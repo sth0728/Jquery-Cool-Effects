@@ -1,5 +1,6 @@
-Cool-Juqery-Effects
+Cool-Jquery-Effects
 ===================
+click to see examples
 <table style="width:100%">
 <tr>
   <td>
@@ -10,3 +11,7 @@ Cool-Juqery-Effects
   </td>
 </tr>
 </table>
+===================
+I am a student from University of Toronto, currently looking for a job.<br>
+Please star this repository if you find the effects useful!<br><br>
+Visit my personal website: http://www.taihwa.net
