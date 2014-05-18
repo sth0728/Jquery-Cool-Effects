@@ -12,4 +12,6 @@ click to see examples
 </tr>
 </table>
 
+I am a student from University of Toronto, currently looking for a job.<br>
+Please star this repository if you find the effects useful!<br>
 Visit my personal website: http://www.taihwa.net
