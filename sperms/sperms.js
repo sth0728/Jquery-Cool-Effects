@@ -49,12 +49,12 @@ $(document).ready(function() {
   		},
   		rotate: angle
 		});
-    MoveSpermOne(i,pos_x,pos_y);
+    MoveSpermOne(i,pos_x,pos_y,angle);
 	}
 
 });
 
-function MoveSpermOne(index,pos_x,pos_y){
+function MoveSpermOne(index,pos_x,pos_y,angle){
 	var duration = Math.floor((Math.random() * 400))+800;
 	$('canvas').animateLayer('tail'+index, {
   		p2: {
@@ -65,27 +65,32 @@ function MoveSpermOne(index,pos_x,pos_y){
     		y3: -10
   		}
 	}, duration, function(layer) {
-  		MoveSpermTwo(index,pos_x,pos_y);
+  		MoveSpermTwo(index,pos_x,pos_y,angle);
 
 	});
 }
 
-function MoveSpermTwo(index,pos_x,pos_y){
+function MoveSpermTwo(index,pos_x,pos_y,angle){
 	var duration = Math.floor((Math.random() * 400))+800;
 	var moveto_x = pos_x + Math.floor((Math.random() * sperm_move_speed * 2 + 1)) - sperm_move_speed;
 	var moveto_y = pos_y + Math.floor((Math.random() * sperm_move_speed * 2 + 1)) - sperm_move_speed;
 	var ran_angle = Math.floor((Math.random() * 40 + 1)) - 20;
+  var new_angle = 0;
   if (moveto_x<0){
     moveto_x = 0;
+    new_angle = ran_angle;
   }
   if (moveto_x>canvas_width){
     moveto_x = canvas_width;
+    new_angle = ran_angle;
   }
   if (moveto_y<0){
     moveto_y = 0;
+    new_angle = ran_angle;
   }
   if (moveto_y>canvas_width){
     moveto_y = canvas_width;
+    new_angle = ran_angle;
   }
 	$('canvas').animateLayer('tail'+index, {
   		p2: {
@@ -97,14 +102,14 @@ function MoveSpermTwo(index,pos_x,pos_y){
   		},
   		x: moveto_x,
   		y: moveto_y,
-  		rotate: '+='+ran_angle
+  		rotate: '+='+new_angle
 	}, duration, function(layer) {
-  		MoveSpermOne(index,pos_x,pos_y);
+  		MoveSpermOne(index,pos_x,pos_y,angle);
 	});
 	$('canvas').animateLayer('head'+index, {
   		x: moveto_x,
   		y: moveto_y,
-  		rotate: '+='+ran_angle
+  		rotate: '+='+new_angle
 	}, duration, function(layer) {
 	});
 }
