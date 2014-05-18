@@ -11,7 +11,7 @@ click to see examples
   </td>
 </tr>
 </table>
-
+===================
 I am a student from University of Toronto, currently looking for a job.<br>
-Please star this repository if you find the effects useful!<br>
+Please star this repository if you find the effects useful!<br><br>
 Visit my personal website: http://www.taihwa.net
