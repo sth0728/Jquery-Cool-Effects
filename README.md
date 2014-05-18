@@ -1,4 +1,4 @@
-Cool-Juqery-Effects
+Cool-Jquery-Effects
 ===================
 click to see examples
 <table style="width:100%">
