@@ -1,0 +1,80 @@
+body {
+  color: white;
+}
+
+h1 {
+  color:white
+}
+
+div.graph {
+	padding-top: 25px;
+	float: left;
+	width: 100px;
+	height: 100px;
+	background-color: white;
+}
+div.colExplain {
+	padding-top: 25px;
+	float: left;
+	width: 200px;
+	height: 100px;
+	background-color: white;
+	color: black;
+}
+
+div.footer {
+	clear:both;
+}
+
+div.template {
+	float: right;
+	background-color: white;
+	height: 100%;
+}
+
+div.data {
+	float: left;
+	bottom: 0;
+	background-color: red;
+	width: 10%;
+	height: 0px;
+	margin-top: 20px;
+}
+
+div.name {
+	padding-top: 10px;
+	color: black;
+	float: right;
+	text-align:center;
+}
+
+div.scale{
+	background-color: white;
+	float: left;
+	height: 100%;
+}
+
+div.innerscale{
+	float: right;
+	clear: right;
+	height: 100%;
+	border-top: 1px solid black;
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+div.scaletext{
+	color: black;
+	position: absolute;
+	left:10px;
+}
+div.explain{
+	margin-top: 10px;
+	float: left;
+	clear: left;
+	width:45%;
+}
+div.explainColor{
+	margin-top: 10px;
+	float: left;
+	width:45%;
+}

@@ -1,4 +1,4 @@
-var canvas_width = $(document).width() * .8;
+var canvas_width = $(document).width() * 0.8;
 var canvas_height = $(document).height() * 0.8;
 var sperm_count = 20;
 var sperm_size = 30;
@@ -89,8 +89,8 @@ function MoveSpermTwo(index,pos_x,pos_y,angle){
     moveto_y = 1;
     new_angle = ran_angle;
   }
-  if (moveto_y>canvas_width){
-    moveto_y = canvas_width-1;
+  if (moveto_y>canvas_height){
+    moveto_y = canvas_height-1;
     new_angle = ran_angle;
   }
 	$('canvas').animateLayer('tail'+index, {
