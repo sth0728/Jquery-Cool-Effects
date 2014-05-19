@@ -2,6 +2,7 @@ Cool-Jquery-Effects
 ===================
 click to see examples
 <table style="width:100%">
+<h2>Graphs</h2>
 <tr>
   <td>
   <a href="http://htmlpreview.github.io/?https://github.com/sth0728/Cool-Jquery-Effects/blob/master/clustered_column/clustered_column_sample.html">
@@ -12,6 +13,7 @@ click to see examples
 </tr>
 </table>
 ===================
+<h2>Effects</h2>
 <table style="width:100%">
 <tr>
   <td>
