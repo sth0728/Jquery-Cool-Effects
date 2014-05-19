@@ -97,38 +97,57 @@ function findColors(data_in){
 function findMax(data_in){
 	var len = data_in.length;
 	for (var i=0; i<len;i++) {
-		if (typeof(data_in[i]) != 'number'){
-			findMax(data_in[i]);
-		} else {
-			if (data_in[i] > max_value){
-				max_value = data_in[i];
-			}
+		var len2 = data_in[i].length;
+		var sum = 0;
+		for (var j=0;j<len2;j++){
+			sum += data_in[i][j];
+		}
+		if (sum > max_value){
+			max_value = sum;
 		}
 	}
 }
 
 function generateGraph(data_in){
 	var len = data_in.length;
-	var len2, value, inner_width;
+	var len2, value, inner_width, sum, portion, container_height;
 	for (var i=len-1; i>=0;i--) {
 		len2 = data_in[i].length;
-		inner_width = (100 * 1 / (len2+2));
-		addSingleDataTo(0, len-i-1, len2+1,inner_width);
+		inner_width = 100 / 3;
+		addSingleDataContainer(0, len-i-1, 0, inner_width);
+		sum = 0;
 		for (var j=0;j<len2;j++){
-			value = data_in[i][j] / max_value;
-			addSingleDataTo(value, len-i-1, j,inner_width);
+			sum += data_in[i][j];
 		}
-		addSingleDataTo(0, len-i-1, len2+2,inner_width);
+		value = sum / max_value;
+		addSingleDataContainer(value, len-i-1, 1, inner_width);
+		for (var j=0;j<len2;j++){
+			sum = 0;
+			for (var k=0;k<len2;k++){
+				sum += data_in[i][k];
+			}
+			container_height = sum / max_value * (1-y_title_space) * height;
+			portion = data_in[i][j] / sum;
+			addSingleDataTo(portion, len-i-1, j,inner_width,container_height);
+		}
+		addSingleDataContainer(0, len-i-1, 2, inner_width);
 	}
 }
 
-function addSingleDataTo(value, col_index, data_index,inner_width){
+function addSingleDataContainer(value, col_index, data_index,inner_width){
 	var current_height = height * (1-y_title_space) * value;
 	var current_remainder = height * (1-y_title_space) * (1-value);
-	$('#col'+col_index).append("<div class='data' id='col" + col_index + 'data' + data_index + "'></div>");
+	$('#col'+col_index).append("<div class='dataContainer' id='container" + col_index + 'data' + data_index + "'></div>");
+	$('#container'+col_index+'data'+data_index).css('background-color', color[data_index]);
+	$('#container'+col_index+'data'+data_index).css('width', inner_width+'%');
+	$('#container'+col_index+'data'+data_index).css('margin-top', current_remainder);
+	$('#container'+col_index+'data'+data_index).animate({'height': current_height});
+}
+
+function addSingleDataTo(value, col_index, data_index,inner_width,container_height){
+	var current_height = container_height * value;
+	$('#container'+col_index+'data1').append("<div class='data' id='col" + col_index + 'data' + data_index + "'></div>");
 	$('#col'+col_index+'data'+data_index).css('background-color', color[data_index]);
-	$('#col'+col_index+'data'+data_index).css('width', inner_width+'%');
-	$('#col'+col_index+'data'+data_index).css('margin-top', current_remainder);
 	$('#col'+col_index+'data'+data_index).animate({'height': current_height});
 }
 
