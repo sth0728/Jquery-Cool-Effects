@@ -6,13 +6,13 @@ click below to see examples.
 <tr>
   <td>
   <a href="http://htmlpreview.github.io/?https://github.com/sth0728/Cool-Jquery-Effects/blob/master/clustered_column/clustered_column_sample.html">
-  <img src="images/clustered_column.jpg" alt="Smiley face" width="200" height="200"><br>
+  <img src="images/clustered_column.jpg" alt="Clustered Column" width="200" height="200"><br>
   Clustered Column
   </a>
   </td>
   <td>
   <a href="http://htmlpreview.github.io/?https://github.com/sth0728/Jquery-Cool-Effects/blob/master/stacked_column/stacked_column_sample.html">
-  <img src="images/stacked_column.jpg" alt="Smiley face" width="200" height="200"><br>
+  <img src="images/stacked_column.jpg" alt="Stacked Column" width="200" height="200"><br>
   Stacked Column
   </a>
   </td>
@@ -24,7 +24,7 @@ click below to see examples.
 <tr>
   <td>
   <a href="http://htmlpreview.github.io/?https://github.com/sth0728/Cool-Juqery-Effects/blob/master/sperms/sperms_sample.html">
-  <img src="images/sperm.jpg" alt="Smiley face" width="200" height="200"><br>
+  <img src="images/sperm.jpg" alt="Sperms" width="200" height="200"><br>
   Sperms
   </a>
   </td>
