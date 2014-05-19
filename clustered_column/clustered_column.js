@@ -44,6 +44,7 @@ function generateColExplain(){
 	}
 }
 
+
 function generateNames(){
 	var names_len = names.length;
 	if (data.length < names.length){
