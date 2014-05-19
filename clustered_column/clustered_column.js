@@ -8,6 +8,7 @@ var data = [[7.3,7.8,7.5],
 			];
 var attr = ['Male','Female','Both sexes'];
 var names = ['Afghanistan','Albania','Algeria','Andorra','Angola','Argentina'];
+
 var width = 600;
 var height = 400;
 var columnExlain_width = 200;
