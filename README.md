@@ -1,6 +1,7 @@
 Cool-Jquery-Effects
 ===================
 click to see examples
+<h2>Column Charts</h2>
 <table style="width:100%">
 <tr>
   <td>
