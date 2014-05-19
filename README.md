@@ -10,6 +10,12 @@ click below to see examples.
   Clustered Column
   </a>
   </td>
+  <td>
+  <a href="http://htmlpreview.github.io/?https://github.com/sth0728/Jquery-Cool-Effects/blob/master/stacked_column/stacked_column_sample.html">
+  <img src="images/stacked_column.jpg" alt="Smiley face" width="200" height="200"><br>
+  Stacked Column
+  </a>
+  </td>
 </tr>
 </table>
 ===================
