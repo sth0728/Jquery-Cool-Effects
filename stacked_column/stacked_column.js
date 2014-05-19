@@ -1,15 +1,13 @@
 // User settings
-var data = [[7,7.8,7.5],
-			[10.7,9.3,10.0],
-			[7.9,8.2,8.0],
-			[11.3,8.6,9.9],
-			[6.6,7.2,6.9],
-			[11.0,11.1,11.1]
+var data = [[62150,11530,2430,5475,240,35,480,1235],
+			[121400,19830,22115,18845,1825,240,520,1640],
+			[47065,7790,1775,4785,635,90,360,455],
+			[42140,6305,2465,4115,160,50,425,485]
 			];
-var attr = ['Male','Female','Both sexes'];
-var names = ['Afghanistan','Albania','Algeria','Andorra','Angola','Argentina'];
+var attr = ['Car as driver','Car as passenger','Public transit','Walked to work','Bicycle','Motorcycle','Taxicab','Other method'];
+var names = ['St. John\'s','Halifax','Moncton','Saint John'];
 
-var width = 600;
+var width = 1000;
 var height = 400;
 var columnExlain_width = 200;
 var x_title = 'x';
