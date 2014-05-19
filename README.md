@@ -1,6 +1,6 @@
 Cool-Jquery-Effects
 ===================
-click to see examples
+click below to see examples.
 <table style="width:100%">
 <h2>Graphs</h2>
 <tr>
