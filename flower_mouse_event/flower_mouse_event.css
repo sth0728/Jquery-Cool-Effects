@@ -1,0 +1,10 @@
+body{
+	background-color: black;
+}
+
+div.effect_squre{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: white;
+}
