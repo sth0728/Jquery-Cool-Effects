@@ -3,6 +3,7 @@ Jquery-Cool-Effects
 click below to see examples.
 <table style="width:100%">
 <h2>Graphs</h2>
+
 <tr>
   <td>
   <a href="http://htmlpreview.github.io/?https://github.com/sth0728/Cool-Jquery-Effects/blob/master/clustered_column/clustered_column_sample.html">
